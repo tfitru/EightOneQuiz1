@@ -1,4 +1,4 @@
- 
+import java.nio.CharBuffer;
 
 public class LoopFun
 {
@@ -10,7 +10,16 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          // set a variable equal to 1
+          // loop through the input (number) and multiply the result by i and sum it to itself
+          // return the result
+          int result = 1;
+
+          for(int i = 1; i< number; i++) {
+              result += result * i;
+          }
+
+          return result;
       }
 
       /**
@@ -21,7 +30,37 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          // My though was to create a way to trim the space between the string
+          // cut out the uppercase letters and append them to another string builder
+          // But could not figure out how to set the middle to upper c
+
+          int j = 0;
+
+          StringBuilder str = new StringBuilder();
+          StringBuilder strC = new StringBuilder();
+
+          String holder = "";
+          str.append(phrase);
+          for(int i = 0; i<phrase.length(); i++) {
+              if(!Character.isWhitespace(str.charAt(i))) {
+                  str.setCharAt(j++, str.charAt(i));
+              }
+          }
+
+
+          str.delete(j, phrase.length());
+          str.trimToSize();
+
+
+
+          for(int i = 0; i<str.length(); i++) {
+              if(Character.isUpperCase(str.charAt(i))) {
+                  strC.append(str.charAt(i));
+              }
+
+          }
+
+          return strC.toString();
       }
 
       /**
@@ -37,6 +76,22 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+
+          // Created a string builder instance to get the method append
+          // Added the string word into the array
+          // Set char array result equal to a new char with the string length
+          // for loop from the length of the char array
+          // iterated into the result array characters from the alphabet and shifted by 3 for the length of the array
+          // Need to understand how to get the alphabet for characters and reshape an array
+          // set the resulting character into a string wrapper to return the string
+
+          StringBuilder str = new StringBuilder();
+          str.append(word);
+          char[] charArray = new char[str.length()];
+          for(int i = 0; i<charArray.length; i++){
+              charArray[i] = (char) ((char) (str.charAt(i) - 'a' + 3) % 26 + 'a');
+          }
+
+          return String.valueOf(charArray);
       }
 }
