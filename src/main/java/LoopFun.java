@@ -30,37 +30,32 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          // My though was to create a way to trim the space between the string
-          // cut out the uppercase letters and append them to another string builder
-          // But could not figure out how to set the middle to upper c
+          // Set a variable to an empty string
+          // set acronym to the first charachter at index 0
+          // Set up a for loop to pass through the string length
+          // if there is any white space in the string, add the space into the variable
+          // move to the next variable
+          // replace any whitespace as a character and set it to upper case
+          // Upper case doesnt matter, just get the three letters
 
-          int j = 0;
+          String acronymOut = "";
 
-          StringBuilder str = new StringBuilder();
-          StringBuilder strC = new StringBuilder();
+          acronymOut += phrase.charAt(0);
 
-          String holder = "";
-          str.append(phrase);
-          for(int i = 0; i<phrase.length(); i++) {
-              if(!Character.isWhitespace(str.charAt(i))) {
-                  str.setCharAt(j++, str.charAt(i));
+          for(int i = 0; i < phrase.length(); i++) {
+              if(Character.isWhitespace(phrase.charAt(i))) {
+                  acronymOut += phrase.charAt(i);
+                  acronymOut += phrase.charAt(i+1);
+
               }
           }
 
 
-          str.delete(j, phrase.length());
-          str.trimToSize();
+
+          return acronymOut.replaceAll("\\s+", "").toUpperCase();
 
 
 
-          for(int i = 0; i<str.length(); i++) {
-              if(Character.isUpperCase(str.charAt(i))) {
-                  strC.append(str.charAt(i));
-              }
-
-          }
-
-          return strC.toString();
       }
 
       /**
