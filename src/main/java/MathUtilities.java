@@ -34,6 +34,8 @@ public class MathUtilities{
       // create a new variable to hold the value and return it
       double numbHalf = number/2;
 
+      // return (double)(number/2)
+      // right answer number/2.0 --> still come out as an integer, b/c there is a floating number
 
       return numbHalf;
   }
@@ -50,9 +52,19 @@ public class MathUtilities{
       // return get
       boolean get;
 
+      // One way to answer it
+      // Start messing with the code, comment out Khris code, okay to leav it in the assestment
+      // if (number%2==1)
+      // return true;
+      // else return false;
+      // Dont have to have the else if the only other thing to return is a false
+
+      // Its a boolean so you can just return number %2!=0
+
+
       if(number%2==0) {
           get = false;
-      } else {
+      } else {   // Don't need this section
           get = true;
       }
 
@@ -66,6 +78,7 @@ public class MathUtilities{
    * @return the result of the number multiply by itself
    */
   public Integer square(Integer number) {
+      // cast the (int) math.pow(number,2)
 
       return number * number;
   }

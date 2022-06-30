@@ -20,6 +20,9 @@ public class LoopFun
           }
 
           return result;
+
+          // return (number == 1) || (number == 0) ? 1 : number * factorial(number -1);
+          // recursion can be dangerous, b/c it is confusing
       }
 
       /**
@@ -36,7 +39,37 @@ public class LoopFun
           // if there is any white space in the string, add the space into the variable
           // move to the next variable
           // replace any whitespace as a character and set it to upper case
-          // Upper case doesnt matter, just get the three letters
+
+
+          // create an array and split it by the spaces
+          // set acronym as the string
+          // for loop through the length of the string
+          // return string.toString
+
+          // string builder
+          // for loop went through the length
+          // add to the string builder
+          //
+
+          // String[] sentence = phrase.split("");
+          // String result = "";
+          // for string s : sentence
+          // result = result + s.charAt(0);
+          // return result.toUppercase
+
+          // crate an array and set to phrase.split
+          // string result to hold on it
+          // for loop enhanced through the sentence array
+          // set the result equal to result + s.charAt(0)
+          // return result.toUpperCase
+
+          //String[] s = pharase.split(" ");
+          // String acronym = "";
+          // for (int i =0; i<phrase.length(); i++)
+          // {
+          //
+          //
+          // }
 
           String acronymOut = "";
 
@@ -79,6 +112,17 @@ public class LoopFun
           // iterated into the result array characters from the alphabet and shifted by 3 for the length of the array
           // Need to understand how to get the alphabet for characters and reshape an array
           // set the resulting character into a string wrapper to return the string
+
+          // String alphabet = "abcdefghijklmnopqrstuvwxyz"  create a string holding alphabet
+          // string builder encWord = new StringBuilder();  set a StringBuilder
+
+//          for(int i =0; i<word.length(); i++) {    // for loop to go through the word length
+//              int index = alphabet.indexOf(word.charAt(i)); // set the index to the character size of the word
+//              idx += 3;  // add 3 to it so that you skip three index
+//              idx = idx %26; // check fi the number is divisible by 3, if so add it to the new string builder
+//              encWord.append(alphabet.charAt(idx));
+//          }
+//          return encWord.toString();
 
           StringBuilder str = new StringBuilder();
           str.append(word);

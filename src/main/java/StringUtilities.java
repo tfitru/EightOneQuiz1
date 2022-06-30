@@ -20,6 +20,12 @@ public class StringUtilities {
         // add the baseValue
         // add the valueToBAdded
         // return string
+
+        // return baseValue + valueToBeAdded;
+        // Alternative return baseValue.concat(valueToBeAdded)
+        // Why baseValue is an object, calling concat on it to pass
+
+
         StringBuilder str = new StringBuilder();
         str.append(baseValue);
         str.append(valueToBeAdded);
@@ -38,6 +44,11 @@ public class StringUtilities {
         // add the string to the string builder
         // call the reverse method
         // return the string
+        // need to look up the reverse with characters
+
+
+        // return New StringBuilder(valueToBeReverseed).reversed().toString();
+
         StringBuilder str = new StringBuilder();
 
             str.append(valueToBeReversed);
@@ -64,6 +75,10 @@ public class StringUtilities {
         // else if the length is not divisible by 2
         // then cut the word in half and return that character value
 
+        //
+        // return word.charAt(word.length()/2);
+
+
         char charMid1;
         char charMid2;
         if(word.length() % 2 ==0) {
@@ -86,6 +101,10 @@ public class StringUtilities {
         // Set a string to the value of the character I want to remove
         // create an if statement to check if the string contains the x
         // if it does contain the word, set a variable equal to the replacement of the character at that position (value.replace(charToRemoveStr, "")
+
+        // String s = value.replaceAll(String.valueOf(charToRemove), "");
+        // return
+
         String charToRemoveStr = String.valueOf(charToRemove);
         if(value.contains(charToRemoveStr)) {
             charToRemoveHold = value.replace(charToRemoveStr,"");
@@ -95,11 +114,20 @@ public class StringUtilities {
         return "";
     }
 
+    //
+
     /**
      * @param sentence String delimited by spaces representative of a sentence
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
+
+
+        // Alternative way, ArrayList<String> s = new ArrayList<>(sentence.split(" ));
+        //return s.get(s.size()-1);
+
+
+
         // Create an array of the string and split it with a string containing space
         String[] lastWordGet = sentence.split(" ");
 
